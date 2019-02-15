@@ -7,6 +7,10 @@
 package practice15.common;
 
 public interface Course {
+
+	Course[] courseList = new Course[2];
+
+
 	String PREFIX = "【Eラーニング】";
 
 	/**
@@ -23,3 +27,4 @@ public interface Course {
 	 */
 	String[] getCourseUnit();
 }
+

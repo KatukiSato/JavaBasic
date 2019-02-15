@@ -2,7 +2,7 @@ package practice14.common;
 
 public class JavaCourse implements Course{
 
-	public String[] getCourseUnit;
+
 
 	public String getCourseName(){
 		return "「【Eラーニング】Java」";

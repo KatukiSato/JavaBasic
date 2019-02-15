@@ -1,11 +1,11 @@
 package practice14;
 
-import practice14.common.JavaCourse;
+import practice14.common.DBCourse;
 
 public class Main {
 
 	public static void main(String[] args) {
-		JavaCourse course = new JavaCourse();
+		DBCourse course = new DBCourse();
 
 		System.out.println(course.getCourseName());
 
