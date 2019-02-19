@@ -38,15 +38,15 @@ public class PTra03_08 {
 		switch (num) {
 
 		case 1:
-			System.out.println(money-150);
+			System.out.println(money-150 +"円");
 			break;
 
 		case 2:
-			System.out.println(money-160);
+			System.out.println(money-160 +"円");
 			break;
 
 		case 3:
-			System.out.println(money-200);
+			System.out.println(money-200 +"円");
 		}
 
 

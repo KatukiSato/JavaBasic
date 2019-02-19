@@ -47,8 +47,15 @@ public class PTra04_05 {
 
 			if (cpuHand == 0) {
 				System.out.println("グー！");
-					if(myHand == 2) {
-					break;
+
+				if(myHand == 0) {
+					System.out.println("あいこ");
+				}else if(myHand == 1) {
+					System.out.println("まけ");
+				}else if(myHand == 2) {
+					System.out.println("かち");
+				}else {
+					System.out.println("手をだしなさい");
 				}
 
 
@@ -56,18 +63,29 @@ public class PTra04_05 {
 
 			} else if (cpuHand == 1) {
 				System.out.println("チョキ！！");
-					if(myHand == 2) {
-					break;
+
+				if(myHand == 0) {
+					System.out.println("かち");
+				}else if(myHand == 1) {
+					System.out.println("あいこ");
+				}else if(myHand == 2) {
+					System.out.println("まけ");
+				}else {
+					System.out.println("手をだしなさい");
 				}
-
-
 
 			} else if (cpuHand == 2){
 				System.out.println("パー！！");
-					if(myHand == 1) {
-					break;
-				}
 
+				if(myHand == 0) {
+					System.out.println("まけ");
+				}else if(myHand == 1) {
+					System.out.println("かち");
+				}else if(myHand == 2) {
+					System.out.println("あいこ");
+				}else {
+					System.out.println("手をだしなさい");
+				}
 
 			}
 

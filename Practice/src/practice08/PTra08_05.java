@@ -35,9 +35,11 @@ public class PTra08_05 {
 		if (choice == 1) {
 			double num =quadrangle(width, height);
 			System.out.println(num);
-		}else {
+		} else if (choice == 2){
 			double num =triangle(width,  height);
 			System.out.println(num);
+		} else {
+			System.out.println("正しく入力してください");
 		}
 
 	}
@@ -52,8 +54,7 @@ public class PTra08_05 {
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、四角形の面積を返すメソッド
 	 */
 	public static double quadrangle (double width, double height) {
-		double quadrangle = width * height;
-		return quadrangle;
+		return width * height;
 	}
 
 
@@ -67,8 +68,8 @@ public class PTra08_05 {
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、三角形の面積を返すメソッド
 	 */
 	public static double triangle (double width, double height) {
-		double triangle = (width * height) / 2;
-		return triangle;
+		return  (width * height) / 2;
+
 	}
 
 }

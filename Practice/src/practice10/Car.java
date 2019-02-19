@@ -1,20 +1,21 @@
 package practice10;
 
+import java.util.Random;
+
 public class Car {
 	int serialNo;
 	String color;
 	int gasoline;
 
-	public int run() {
-		this.gasoline -= 1;
-		int run = new java.util.Random().nextInt(15) + 1;
-		
-		if (gasoline < 0) {
-			run = -1;
+	int run() {
+		if (gasoline == 0) {
+			return -1;
 		}
-		
-		return run;
+		gasoline--;
 
+		Random random = new Random();
+		int distance = random.nextInt(15) + 1;
+		return distance;
 	}
 }
 /*

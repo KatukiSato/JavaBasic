@@ -33,71 +33,43 @@ public class PTra10_06 {
 		Car car3 = new Car();
 		car3.color = "greeen";
 		car3.serialNo = 1125;
-		car3.gasoline = 70;
+		car3.gasoline = 7;
 
 		car[0] = car1;
 		car[1] = car2;
 		car[2] = car3;
 
+		for (Car kuruma : car) {
+			System.out.println(kuruma.color);
+			System.out.println(kuruma.serialNo);
+			System.out.println(kuruma.gasoline);
+			System.out.println();
+		}
+
 		final int distance = 300;
 
-		int progress = 0;
-		int count = 0;
+		int[] count = new int[car.length];
 
-		for(int i = 0; i < car.length; i++) {
+		for (int i = 0; i < car.length; i++) {
+			int move = 0;
 			car[i].run();
-		}
 
-		while (progress < distance) {
-			count ++;
-			progress += car[0].run();
-			if(!(car[0].gasoline == 0)) {
-				continue;
-			}else {
-				break;
+			while (distance - move > 0) {
+				int progress = car[i].run();
+				if (progress == -1) {
+					count[i] = -1;
+					break;
+				}
+				count[i]++;
+				move += progress;
 			}
 		}
-		if (car[0].gasoline <= 0) {
-			System.out.println("目的地に到達できませんでした");
-		} else {
-			System.out.println("目的地にまで"+count+"時間かかりました。残りのガソリンは、"+car[0].gasoline+"リットルです");
-		}
-
-		progress =  0;
-		count = 0;
-
-		while (progress < distance) {
-			count ++;
-			progress += car[1].run();
-			if(!(car[1].gasoline == 0)) {
-				continue;
-			}else {
-				break;
+		for (int i = 0; i < car.length; i++) {
+			if (count[i] == -1) {
+				System.out.println("目的地に到達できませんでした");
+			} else {
+				System.out.println("目的地にまで" + count[i] + "時間かかりました。");
 			}
-		}
-		if (car[1].gasoline <= 0) {
-			System.out.println("目的地に到達できませんでした");
-		} else {
-			System.out.println("目的地にまで"+count+"時間かかりました。残りのガソリンは、"+car[1].gasoline+"リットルです");
-		}
- 
-		progress = 0;
-		count = 0;
-
-		while (progress < distance) {
-			count ++;
-			progress += car[2].run();
-			if(!(car[2].gasoline == 0)) {
-				continue;
-			}else {
-				break;
-			}
-		}
-		if (car[2].gasoline <= 0) {
-			System.out.println("目的地に到達できませんでした");
-		} else {
-			System.out.println("目的地にまで"+count+"時間かかりました。残りのガソリンは、"+car[2].gasoline+"リットルです");
 		}
 	}
 }
-

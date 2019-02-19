@@ -44,8 +44,11 @@ public class PTra04_04 {
 
 			int go=map-progress;;
 
-
-		       	System.out.println("残り"+go+"マス");
+			if(go <= 0) {
+		       	System.out.println("ゴール！！");
+			}else {
+				System.out.println("残り"+go+"マス");
+			}
 
 
 		}

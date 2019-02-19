@@ -24,6 +24,9 @@ public class PTra07_06 {
 				sum += array[i][j];
 			}
 		}
+		System.out.println(num);
+		System.out.println(sum);
+
 		System.out.println((double)sum/num);
 
 	}

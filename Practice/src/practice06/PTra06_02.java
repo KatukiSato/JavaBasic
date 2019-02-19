@@ -14,11 +14,11 @@ public class PTra06_02 {
 		for (int start =0; start <20; start++) {
 
 			// ★ 今何回目の処理なのかを出力してください[
-			System.out.println(start);
+			System.out.println(start+1);
 
 
 			// ★ 奇数回のときには、「奇数」を出力してください
-			if(!(start %2==0)) {
+			if(!((start+1) %2==0)) {
 				System.out.println("奇数");
 			}
 		}
