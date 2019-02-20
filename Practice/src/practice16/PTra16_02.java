@@ -28,6 +28,13 @@ public class PTra16_02 {
 		Float ff = f;
 		Double dd = d;
 
-
+		System.out.println(bb);
+		System.out.println(byby);
+		System.out.println(ss);
+		System.out.println(cc);
+		System.out.println(ii);
+		System.out.println(ll);
+		System.out.println(ff);
+		System.out.println(dd);
 	}
 }

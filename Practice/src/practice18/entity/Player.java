@@ -1,4 +1,4 @@
-package practice18;
+package practice18.entity;
 
 public class Player {
 	private String Position;

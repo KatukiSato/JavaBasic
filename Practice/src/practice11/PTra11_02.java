@@ -18,10 +18,10 @@ public class PTra11_02 {
 		// ★ ユーザが入力した文字列が、本情報のタイトル一部に含まれていた場合は、その本情報を出力してください
 		String input = new java.util.Scanner(System.in).nextLine();
 
-		for(int i =0; i < books.length; i++) {
+		for(Book book : books) {
 
-			if(books[i].title.contains(input)) {
-				System.out.println(books[i].dispBookInfo());
+			if(book.title.contains(input)) {
+				System.out.println(book.dispBookInfo());
 			}
 		}
 	}

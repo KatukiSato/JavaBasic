@@ -42,16 +42,16 @@ public class PTra13_07 {
 		 * 上記を繰り返し行います
 		 */
 		while(true) {
-			man.attack();
-			man.damage(man.getPower());
-			if(slime.getHp() <= 0) {
+			int manattack = man.attack();
+			System.out.println(man.getName() + "の攻撃！" +  manattack +"のダメージ！");
+			if(slime.damage(manattack)) {
 				System.out.println(man.getName()+"はスライムとの戦闘に勝利した");
 				break;
 			}
 
-			slime.attack();
-			slime.damage(slime.getPower());
-			if(man.getHp() <= 0) {
+			int slimeattack = slime.attack();
+			System.out.println(slime.getName() + "の攻撃！" + slimeattack + "のダメージ！");
+			if(man.damage(slimeattack)) {
 				System.out.println("スライムは"+man.getName()+"との戦闘に勝利した");
 				break;
 			}

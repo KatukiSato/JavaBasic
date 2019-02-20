@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+import practice18.entity.Player;
+
 public class PTra18_04 {
 
 	/*

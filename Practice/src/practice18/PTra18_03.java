@@ -11,6 +11,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import practice18.entity.Player;
+
 public class PTra18_03 {
 
 	/*

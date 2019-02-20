@@ -7,6 +7,7 @@
 package practice13.ptra13;
 
 import practice13.common.Employee;
+import practice13.common.Person;
 
 public class PTra13_09 {
 
@@ -36,23 +37,18 @@ public class PTra13_09 {
 	public static void main(String[] args) {
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
-		Employee[] employee = new Employee[3];
-
-		Employee employee1 = new Employee();
-		Employee employee2 = new Employee();
-		Employee employee3 = new Employee();
-
-		employee[0] = employee1;
-		employee[1] = employee2;
-		employee[2] = employee3;
+		Employee[] employee = new Employee[NAMEDATA.length];
 
 		for(int i=0;i<employee.length;i++) {
+			employee[i] = new Employee();
+			employee[i].setUserId(Person.BASE_NO + i);
 			employee[i].setUserNm(NAMEDATA[i]);
 			employee[i].setMail(MAILDATA[i]);
 			employee[i].setPassword(PASSDATA[i]);
 			employee[i].setDepartmentNm(QUATERDATA[0][i]);
 			employee[i].setDepaetmentCnt(Integer.parseInt(QUATERDATA[1][i]));
 
+			System.out.println(employee[i].getUserId());
 			System.out.println(employee[i].getUserNm());
 			System.out.println(employee[i].getMail());
 			System.out.println(employee[i].getPassword());

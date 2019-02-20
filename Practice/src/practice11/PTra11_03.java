@@ -11,7 +11,7 @@ public class PTra11_03 {
 	/*
 	 * ★ PTra11_03クラスに、クラスフィールドでint型のnumberを定義してください
 	 */
-	int number;
+	static int number;
 
 
 	/*

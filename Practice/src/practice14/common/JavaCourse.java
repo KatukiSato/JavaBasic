@@ -5,7 +5,7 @@ public class JavaCourse implements Course{
 
 
 	public String getCourseName(){
-		return "「【Eラーニング】Java」";
+		return  PREFIX + "Java";
 	}
 
 	public String[] getCourseUnit(){

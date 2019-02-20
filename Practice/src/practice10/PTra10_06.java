@@ -1,4 +1,7 @@
 package practice10;
+
+import java.util.Scanner;
+
 /*
  * PTra10_06.java
  *   作成	LIKEIT	2017
@@ -18,32 +21,22 @@ public class PTra10_06 {
 		 * carインスタンスを3件作成し、それぞれの色、ガソリンを入力して決定してください
 		 * 各carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
 		 */
+		Scanner scanner = new Scanner(System.in);
+
 		Car[] car = new Car[3];
 
-		Car car1 = new Car();
-		car1.color = "blue";
-		car1.serialNo = 334;
-		car1.gasoline = 50;
+		for(int i = 0; i < car.length; i++) {
+			System.out.println((i+1) + "台目");
+			car[i] = new Car();
 
-		Car car2 = new Car();
-		car2.color = "pink";
-		car2.serialNo = 417;
-		car2.gasoline = 60;
+			System.out.println("シリアルナンバーと色、ガソリンをカンマ区切りで入力してください");
+			String line = scanner.nextLine();
 
-		Car car3 = new Car();
-		car3.color = "greeen";
-		car3.serialNo = 1125;
-		car3.gasoline = 7;
+			String[] info = line.split(",");
 
-		car[0] = car1;
-		car[1] = car2;
-		car[2] = car3;
-
-		for (Car kuruma : car) {
-			System.out.println(kuruma.color);
-			System.out.println(kuruma.serialNo);
-			System.out.println(kuruma.gasoline);
-			System.out.println();
+			car[i].serialNo = Integer. parseInt(info[0]);
+			car[i].color = info[1];
+			car[i].gasoline = Integer.parseInt(info[2]);
 		}
 
 		final int distance = 300;
@@ -68,7 +61,7 @@ public class PTra10_06 {
 			if (count[i] == -1) {
 				System.out.println("目的地に到達できませんでした");
 			} else {
-				System.out.println("目的地にまで" + count[i] + "時間かかりました。");
+				System.out.println("目的地にまで" + count[i] + "時間かかりました。残りのガソリンは" + car[i].gasoline +"です。");
 			}
 		}
 	}

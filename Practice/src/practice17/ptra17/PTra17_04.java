@@ -18,9 +18,9 @@ public class PTra17_04 {
 		try {
 		String[] strarray =str.split("");
 
-		for (int i= 0; i < strarray.length; i++) {
+		for (String array : strarray) {
 			Thread.sleep(500);
-			System.out.print(strarray[i]);
+			System.out.print(array);
 		}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
